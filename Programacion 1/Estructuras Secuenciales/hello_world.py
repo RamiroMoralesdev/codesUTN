@@ -40,8 +40,8 @@ for i in range(1, 11):
 
     
 # EJ 7
-primernumero = input('Ingrese el primer numero: ')
-segundonumero = input('Ingrese el segundo numero: ')
+primernumero = int(input('Ingrese el primer numero: '))
+segundonumero = int(input('Ingrese el segundo numero: '))
 
 print(f"El resultado de la suma es: {primernumero + segundonumero}")
 print(f"El resultado de la resta es: {primernumero - segundonumero}")
