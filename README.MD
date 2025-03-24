@@ -24,7 +24,7 @@
 <br>
 
 <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp;***Sobre mi***
-Soy un entusiasta del desarrollo web con mas dos años de experiencia, enfocándome principalmente en el desarrollo front-end. Actualmente, estoy estudiando una carrera en ingeniería de software y explorando continuamente nuevas tecnologías y mejores prácticas. Mi objetivo es crear experiencias digitales innovadoras y funcionales para los usuarios.
+Soy un entusiasta del desarrollo web con mas dos años de experiencia, enfocándome principalmente en el desarrollo front-end. Actualmente, estoy estudiando y explorando continuamente nuevas tecnologías y mejores prácticas. Mi objetivo es crear experiencias digitales innovadoras y funcionales para los usuarios.
 
 📚 Actualmente me encuentro en la Tecnicatura Universitaria en Programacion en la UTN
 🌱 Actualmente estoy aprendiendo:
