@@ -1,6 +1,7 @@
 <h1 align="center">Hola, Soy Ramiro Morales</h1>
     <h3 align="center">Web developer and designer. Un estudiante autodidacta "Ahora en universidad" que aprende rápido y está listo para nuevos desafíos. </h3>
     <hr>
+📫 Contáctame en: <a href="https://www.linkedin.com/in/ramimorales/">Perfil de LinkedIn</a>
     <div class="skills">
         <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25">
         <b> Skills</b>
@@ -19,23 +20,18 @@
 
 </div>
 <br>
-<img align="right" height="270px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
 
-<br>
+Tecnicatura Universitaria en Programación
+📍 Universidad Tecnológica Nacional
 
-<img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp;***Sobre mi***
-Soy un entusiasta del desarrollo web con mas dos años de experiencia, enfocándome principalmente en el desarrollo front-end. Actualmente, estoy estudiando y explorando continuamente nuevas tecnologías y mejores prácticas. Mi objetivo es crear experiencias digitales innovadoras y funcionales para los usuarios.
+✨ Estudiante
+Nombre: Ramiro Morales
+Comisión: M2025-4
+📁 Descripción del Repositorio
+Este repositorio almacena todas los trabajos prácticos realizados durante la cursada
 
-📚 Actualmente me encuentro en la Tecnicatura Universitaria en Programacion en la UTN
-🌱 Actualmente estoy aprendiendo:
+📌 Estructura del repositorio:
+Cada trabajo está organizado en carpetas individuales.
+Los archivos de código fuente (.py) incluyen comentarios y estructura adecuada.
+Se busca mantener un código limpio, ordenado y bien documentado.
 
-React JS
-
-👯 Estoy buscando colaborar en proyectos de código abierto y contribuir a comunidades de desarrollo web.
-✔️ Pregúntame sobre diseño web o tecnologías frontend—¡siempre estaré encantado de ayudar!
-
-📫 Contáctame en: <a href="https://www.linkedin.com/in/ramimorales/">Perfil de LinkedIn</a>
-
-
-
-[![](https://github-readme-stats.vercel.app/api?username=ramiromoralesdev&show_icons=true&theme=tokyonight&hide_border=true&locale=en)](https://github.com/ramiromoralesdev)
