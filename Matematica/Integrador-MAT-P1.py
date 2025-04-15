@@ -8,7 +8,7 @@ def decimal_a_binario(num):
 
 def binario_a_decimal(binary_str):
     return int(binary_str, 2)
-
+ # Función para convertir un número decimal a binario, Eligiendo un numero aleatorio para el juego
 def jugar_binario_a_decimal():
     numero = random.randint(1, 255)
     binario = decimal_a_binario(numero)
@@ -20,6 +20,7 @@ def jugar_binario_a_decimal():
     else:
         print(f"Incorrecto. La respuesta correcta era {numero}\n")
 
+# Función para convertir un número binario a decimal, Eligiendo un numero aleatorio para el juego
 def jugar_decimal_a_binario():
     numero = random.randint(1, 255)
     print(f"\n¿Qué número binario representa este decimal?: {numero}")
