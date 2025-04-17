@@ -6,8 +6,6 @@ import random
 def decimal_a_binario(num):
     return bin(num)[2:]
 
-def binario_a_decimal(binary_str):
-    return int(binary_str, 2)
  # Función para convertir un número decimal a binario, Eligiendo un numero aleatorio para el juego
 def jugar_binario_a_decimal():
     numero = random.randint(1, 255)
