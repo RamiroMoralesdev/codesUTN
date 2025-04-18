@@ -74,10 +74,14 @@ def conversion():
         return binario if binario else "0" # Devuelve "0" si la cadena binaria está vacía.
 
     limpiar_pantalla()
-    numero_decimal = int(input("Ingrese un número decimal: "))
-    numero_binario = conversion_binario(numero_decimal) # Convierte el número decimal a binario.
+    numero_binario = input("Ingrese un número binario: ")
+    numero_decimal = int(input("\nIngrese un número decimal: "))
+    
+    binario_a_decimal = conversion_decimal(numero_binario)
+    decimal_a_binario = conversion_binario(numero_decimal)
 
-    print(f"El número {numero_decimal} en binario es: {numero_binario}") # Muestra el resultado
+    print(f"\nEl número binario {numero_binario} en decimal es: {binario_a_decimal}")
+    print(f"\nEl número {numero_decimal} en binario es: {decimal_a_binario}")
     presionar_tecla_para_continuar()
 
 def tablas_de_verdad():
