@@ -53,12 +53,6 @@ def conversion():
         
         return decimal # Devuelve el número decimal.
 
-    # Llama a la función
-    binario = "1010" # Número binario a convertir.
-    numero_decimal = conversion_decimal(binario) # Convierte el número binario a decimal.
-
-    print(f"El número binario {binario} en decimal es: {numero_decimal}") # Muestra el resultado.
-
     # Este programa convierte un número decimal a binario.
     def conversion_binario(numero):
         # Esta función convierte un número decimal a binario.
