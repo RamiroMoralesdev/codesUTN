@@ -1,4 +1,5 @@
-#!bin/bash
+function grupo2 {
+    #!bin/bash
 # EJ 2.1
 
 read -p "Ingresá una nota numérica del 0 al 10: " nota
@@ -158,3 +159,4 @@ for i in "${!preguntas[@]}"; do
 done
 
 echo "Tienes $aciertos aciertos." 
+}

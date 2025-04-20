@@ -1,4 +1,5 @@
-#!/bin/bash
+function grupo6 {
+    #!/bin/bash
 
 clear
 
@@ -152,3 +153,4 @@ function menu_principal(){
 while true; do
     menu_principal  
 done
+}

@@ -1,4 +1,5 @@
-#!/bin/bash
+function grupo5 {
+    #!/bin/bash
 puntuacion="puntuacion.txt"
 puntuacionTemp="puntuacion.temp"
 
@@ -77,3 +78,5 @@ function procesar_puntuaciones() {
 
 # llamada del programa principal 
 procesar_puntuaciones
+
+}

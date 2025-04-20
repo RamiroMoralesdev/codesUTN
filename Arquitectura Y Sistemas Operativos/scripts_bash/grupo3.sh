@@ -1,4 +1,5 @@
-#!/bin/bash
+function grupo3 {
+    #!/bin/bash
 
 #EJ 3.1
 # Solicitar al usuario la ruta del archivo
@@ -60,3 +61,5 @@ for file in *"$extension"; do
     echo "----------------------------"
   fi
 done
+
+}

@@ -1,4 +1,5 @@
-#!/bin/bash
+function grupo4 {
+    #!/bin/bash
 
 
 # EJ 4.1
@@ -190,3 +191,4 @@ done
 
 # ordena de forma descendente por número y lo modifica en el archivo
 sort -t',' -k2 -nr "$puntuacion" -o "$puntuacion"
+}

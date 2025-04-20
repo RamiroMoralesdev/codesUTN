@@ -1,4 +1,5 @@
-#!/bin/bash
+function grupo1 {
+    #!/bin/bash
 
 # EJ 1
 echo "Hola $LOGNAME, bienvenido a este Script"
@@ -119,3 +120,5 @@ case $# in
         realizar_operaciones
         ;;
 esac
+
+}
