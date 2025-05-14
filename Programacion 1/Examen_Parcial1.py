@@ -12,9 +12,9 @@
 
 
 
-# for t in range (0,3):
-#     for n in range (1,4):
-#       print(t*n, end=" ")
+for t in range (1,3):
+    for n in range (1,4):
+      print(t*n, end=" ")
 
 
 # lista = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -38,30 +38,30 @@
 
 
 
-f = "HolaMundoCruel"
-r = f
-l = len(f)  # 14
+# f = "HolaMundoCruel"
+# r = f
+# l = len(f)  # 14
 
-for i in range(0, l + 1, 5):  # i tomará el valor 0 y luego 11
-    r = f[i:l]  # r = f[11:14] = "uel"
-    print(r)
+# for i in range(0, l + 1, 5):  # i tomará el valor 0 y luego 11
+#     r = f[i:l]  # r = f[11:14] = "uel"
+#     print(r)
 
 
-for n in range(1, 11):
-    bandera = False
-    d = 0
+# for n in range(1, 11):
+#     bandera = False
+#     d = 0
 
-    for c in range(1, n + 1):
-        if n % c == 0:
-            d += 1
+#     for c in range(1, n + 1):
+#         if n % c == 0:
+#             d += 1
 
-    if d <= 2:
-        bandera = True
-    else:
-        bandera = False
+#     if d <= 2:
+#         bandera = True
+#     else:
+#         bandera = False
 
-    if bandera:
-        print(n, end=" ")
+#     if bandera:
+#         print(n, end=" ")
 
 
 
