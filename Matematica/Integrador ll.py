@@ -53,6 +53,7 @@ a = int(input("Ingrese un año de nacimiento: "))
 b = int(input("Ingrese un año de nacimiento: "))
 def calcular_par_impar(a,b):
 
+    # Contar cuántos nacieron en años pares e impares utilizando estructuras repetitivas.
     while a % 2 == 0 & b % 2 == 0: # Si a es par o b es par
         print(f"Los años {a} y {b} son pares")
         break
@@ -69,9 +70,7 @@ def calcular_par_impar(a,b):
         else:
             return False
         
-    if a in es_bisiesto(a):
-        print("Tenemos un año especial")
-    if b in es_bisiesto(b):
+    if es_bisiesto(a) == True or es_bisiesto(b) == True:
         print("Tenemos un año especial")
     else: print("Ninguno de los años es bisiesto")
 
