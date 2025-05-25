@@ -92,3 +92,5 @@ for anio in anios:
     for edad in edades:
         print(f"({anio}, {edad})")
 
+
+print("Gracias por ejecutar el programa")
