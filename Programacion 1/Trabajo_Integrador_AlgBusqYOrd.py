@@ -1,9 +1,6 @@
 import random
 import colorama
 import time
-<<<<<<< HEAD
-
-=======
 import os 
 
 def limpiar_pantalla():
@@ -11,7 +8,6 @@ def limpiar_pantalla():
 
 # Random.sample(range(inicio, fin), cantidad de elementos) 
 listaDeNumerosIntermedia = random.sample(range(1, 51), 50)
->>>>>>> Rami
 listaDeNumerosGigante = random.sample(range(1, 1001), 1000)
 
 # ================================ ALGORITMOS DE ORDENAMIENTO ================================
@@ -25,11 +21,8 @@ def BubbleSort(lista):
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]
     return lista
 
-<<<<<<< HEAD
-
-=======
 def InsertionSort(listaGrande): # Ordena insertando cada elemento en su poscicion correcta dentro de una nueva lista ordenada.
->>>>>>> Rami
+
     for i in range(1, len(listaGrande)):
         key = listaGrande[i]
         j = i - 1
@@ -39,11 +32,8 @@ def InsertionSort(listaGrande): # Ordena insertando cada elemento en su poscicio
         listaGrande[j + 1] = key
     return listaGrande
 
-<<<<<<< HEAD
-
-=======
 def QuickSort(listaGigante): # Ordena dividiendo la lista en sublistas menores y mayores al elemento pivote o elemento central, y luego ordenando esas sublistas recursivamente.
->>>>>>> Rami
+
     if len(listaGigante) <= 1:
         return listaGigante
     else:
@@ -53,11 +43,8 @@ def QuickSort(listaGigante): # Ordena dividiendo la lista en sublistas menores y
         derecha = [x for x in listaGigante if x > elemento_pivot]
         return QuickSort(izquierda) + medio + QuickSort(derecha)
 
-<<<<<<< HEAD
-
-=======
 def SelectionSort(lista): # Ordena seleccionando el elemento mas pequeño de la lista y colocandolo al principio, Es recursivo hasta completar la lista.
->>>>>>> Rami
+
     for i in range(len(lista)):
         min_idx = i
         for j in range(i + 1, len(lista)):
@@ -66,10 +53,7 @@ def SelectionSort(lista): # Ordena seleccionando el elemento mas pequeño de la 
         lista[i], lista[min_idx] = lista[min_idx], lista[i]
     return lista
 
-<<<<<<< HEAD
-
 # ================================ ALGORITMOS DE BUSQUEDA =======================================
->>>>>>> Rami
 
 # Búsqueda Binaria: requiere lista ordenada, divide el rango de búsqueda a la mitad
 def BusquedaBinaria(lista, objetivo):
@@ -84,18 +68,15 @@ def BusquedaBinaria(lista, objetivo):
             derecha = medio - 1
     return -1  # Si no lo encuentra
 
-<<<<<<< 
-=======
 
 def BusquedaLineal(lista, objetivo): # Bucle for que recorre la cada elemento de la lista y compara si es igual al objetivo.
->>>>>>> Rami
+
     for i in range(len(lista)):
         if lista[i] == objetivo:
             return i
     return -1  # Si no lo encuentra
 
-<<<<<<< HEAD
-=======
+
 def menu():
     while True:
         limpiar_pantalla()
@@ -160,4 +141,3 @@ def menu():
         input("\nPresione Enter para volver al menú...")
 
 menu() 
->>>>>>> Rami
