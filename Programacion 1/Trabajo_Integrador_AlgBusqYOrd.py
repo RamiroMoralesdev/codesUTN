@@ -1,13 +1,17 @@
 import random
 import colorama
 import time
-import os  # Usado para limpiar la consola según el sistema operativo
+<<<<<<< HEAD
 
-# ================================ GENERACIÓN DE LISTAS ALEATORIAS ================================
-# Generamos listas con números aleatorios de diferentes tamaños
-listaDeNumerosEnana = random.sample(range(1, 11), 10)
-listaDeNumeros = random.sample(range(1, 51), 50)
-listaDeNumerosGrande = random.sample(range(1, 201), 200)
+=======
+import os 
+
+def limpiar_pantalla():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+# Random.sample(range(inicio, fin), cantidad de elementos) 
+listaDeNumerosIntermedia = random.sample(range(1, 51), 50)
+>>>>>>> Rami
 listaDeNumerosGigante = random.sample(range(1, 1001), 1000)
 
 # ================================ ALGORITMOS DE ORDENAMIENTO ================================
@@ -21,8 +25,11 @@ def BubbleSort(lista):
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]
     return lista
 
-# Insertion Sort: inserta cada elemento en su lugar correcto dentro de la parte ya ordenada
-def InsertionSort(listaGrande):
+<<<<<<< HEAD
+
+=======
+def InsertionSort(listaGrande): # Ordena insertando cada elemento en su poscicion correcta dentro de una nueva lista ordenada.
+>>>>>>> Rami
     for i in range(1, len(listaGrande)):
         key = listaGrande[i]
         j = i - 1
@@ -32,8 +39,11 @@ def InsertionSort(listaGrande):
         listaGrande[j + 1] = key
     return listaGrande
 
-# Quick Sort: divide la lista en sublistas menores/mayores a un pivote y las ordena recursivamente
-def QuickSort(listaGigante):
+<<<<<<< HEAD
+
+=======
+def QuickSort(listaGigante): # Ordena dividiendo la lista en sublistas menores y mayores al elemento pivote o elemento central, y luego ordenando esas sublistas recursivamente.
+>>>>>>> Rami
     if len(listaGigante) <= 1:
         return listaGigante
     else:
@@ -43,8 +53,11 @@ def QuickSort(listaGigante):
         derecha = [x for x in listaGigante if x > elemento_pivot]
         return QuickSort(izquierda) + medio + QuickSort(derecha)
 
-# Selection Sort: busca el menor elemento y lo coloca al principio de la lista
-def SelectionSort(lista):
+<<<<<<< HEAD
+
+=======
+def SelectionSort(lista): # Ordena seleccionando el elemento mas pequeño de la lista y colocandolo al principio, Es recursivo hasta completar la lista.
+>>>>>>> Rami
     for i in range(len(lista)):
         min_idx = i
         for j in range(i + 1, len(lista)):
@@ -53,35 +66,10 @@ def SelectionSort(lista):
         lista[i], lista[min_idx] = lista[min_idx], lista[i]
     return lista
 
-# ================================ PRUEBAS INICIALES ================================
+<<<<<<< HEAD
 
-# Prueba Bubble Sort
-print("================= ALGORITMO BUBBLE SORT =================")
-print(colorama.Fore.BLUE + "Lista de numeros aleatorios sin ordenar:", listaDeNumeros)
-print(colorama.Fore.RED + "Lista ordenada con Bubble Sort:", BubbleSort(listaDeNumeros))
-
-# Prueba Insertion Sort
-print("================= ALGORITMO INSERTION SORT =================")
-print(colorama.Fore.GREEN + f"Lista grande de numeros aleatorios sin ordenar:", listaDeNumerosGrande)
-print(colorama.Fore.YELLOW + f"Lista grande ordenada con Insertion Sort:", InsertionSort(listaDeNumerosGrande))
-
-# Prueba Quick Sort
-print("================= ALGORITMO QUICK SORT =================")
-print(colorama.Fore.GREEN + f"Lista gigante de numeros aleatorios sin ordenar: {listaDeNumerosGigante}")
-print(colorama.Fore.YELLOW + f"Lista gigante ordenada con Quick Sort: {QuickSort(listaDeNumerosGigante)}")
-
-# Prueba Selection Sort
-print("================= ALGORITMO SELECTION SORT =================")
-print(colorama.Fore.CYAN + f"Lista de numeros aleatorios sin ordenar: {listaDeNumerosEnana}")
-print(colorama.Fore.MAGENTA + f"Lista de numeros ordenada con Selection Sort: {SelectionSort(listaDeNumerosEnana)}")
-
-# Prueba función sorted() de Python (muy eficiente)
-print("================= ALGORITMO sorted() =================")
-listaOrdenada = sorted(listaDeNumeros)
-print(colorama.Fore.YELLOW + f"Lista de numeros ordenada con la funcion sorted(): {listaOrdenada}")
-
-# ================================ ALGORITMOS DE BÚSQUEDA ================================
-#print(colorama.Fore.BLUE + "Algoritmos de busqueda")
+# ================================ ALGORITMOS DE BUSQUEDA =======================================
+>>>>>>> Rami
 
 # Búsqueda Binaria: requiere lista ordenada, divide el rango de búsqueda a la mitad
 def BusquedaBinaria(lista, objetivo):
@@ -96,99 +84,80 @@ def BusquedaBinaria(lista, objetivo):
             derecha = medio - 1
     return -1  # Si no lo encuentra
 
-# Búsqueda Lineal: recorre la lista uno por uno hasta encontrar el elemento
-def BusquedaLineal(lista, objetivo):
+<<<<<<< 
+=======
+
+def BusquedaLineal(lista, objetivo): # Bucle for que recorre la cada elemento de la lista y compara si es igual al objetivo.
+>>>>>>> Rami
     for i in range(len(lista)):
         if lista[i] == objetivo:
             return i
     return -1  # Si no lo encuentra
 
-# Entrada del usuario para probar búsqueda binaria
-#numeroObjetivo = int(input("Ingrese un numero entre 1 y 50: "))
-#print(f"Posicion del numero {numeroObjetivo} en la lista ordenada con Bubble Sort Y Busqueda Binaria:", 
-#BusquedaBinaria(BubbleSort(listaDeNumeros), numeroObjetivo))
+<<<<<<< HEAD
+=======
+def menu():
+    while True:
+        limpiar_pantalla()
 
-# Entrada del usuario para probar búsqueda lineal
-#numeroObjetivoLineal = int(input("Ingrese un numero entre 1 y 10: "))
-#print(f"Posicion del numero {numeroObjetivoLineal} en la lista ordenada con Selection Sort Y Busqueda Lineal:", 
-#BusquedaLineal(SelectionSort(listaDeNumerosEnana), numeroObjetivoLineal))
+        print("1. Ordenar lista de numeros con Bubble Sort")
+        print("2. Ordenar lista grande de numeros con Insertion Sort")
+        print("3. Ordenar lista gigante de numeros con Quick Sort")
+        print("4. Ordenar lista de numeros enana con Selection Sort")
+        print("5. Buscar un numero en la lista ordenada con Bubble Sort y Busqueda Binaria")
+        print("6. Buscar un numero en la lista ordenada con Selection Sort y Busqueda Lineal")
+        print("7. Salir")
+        opcion = input("Seleccione una opcion: ")
+        if opcion == "7":
+            print(colorama.Fore.CYAN + "Saliendo del programa...")
+            break
 
-# ================================ MENÚ FINAL CON MEDICIÓN DE TIEMPO ================================
+        limpiar_pantalla()  # Limpiar después de seleccionar cada opción
+        
+        inicio = time.time()  
 
-while True:
-    os.system("cls" if os.name == "nt" else "clear")
+        if opcion == "1":
+            print(colorama.Fore.RED + "Lista ordenada con Bubble Sort:", BubbleSort(listaDeNumerosGigante))
+            nombreAlgoritmo = "Bubble Sort"
 
-    print(colorama.Fore.BLUE + "\n====== Menú de comparación de algoritmos ======")
-    print("1. Bubble Sort")
-    print("2. Insertion Sort")
-    print("3. Quick Sort")
-    print("4. Selection Sort")
-    print("5. sorted() (función incorporada de Python)")
-    print("6. Pruebas de búsqueda (Binaria y Lineal)")
-    print("7. Salir")
+        elif opcion == "2":
+            print(colorama.Fore.YELLOW + f"Lista grande ordenada con Insertion Sort:", InsertionSort(listaDeNumerosGigante))
+            nombreAlgoritmo = "Insertion Sort"
 
-    opcion = input("Elige una opción: ")
+        elif opcion == "3":
+            print(colorama.Fore.YELLOW + f"Lista gigante ordenada con Quick Sort: {QuickSort(listaDeNumerosGigante)}")
+            nombreAlgoritmo = "Quick Sort"
 
-    if opcion == "7":
-        print(colorama.Fore.RED + "Saliendo del programa...")
-        break
+        elif opcion == "4":
+            print(colorama.Fore.MAGENTA + f"Lista de numeros ordenada con Selection Sort: {SelectionSort(listaDeNumerosGigante)}")
+            nombreAlgoritmo = "Selection Sort"
 
-    # Nueva lista aleatoria para pruebas de ordenamiento
-    listaBase = random.sample(range(1, 501), 500)
+        elif opcion == "5":
+            numeroObjetivo = int(input("Ingrese un numero entre 1 y 50: "))
+            posicion = BusquedaBinaria(BubbleSort(listaDeNumerosIntermedia), numeroObjetivo)
+            if posicion != -1:
+                print(f"Posicion del numero {numeroObjetivo} en la lista ordenada con Bubble Sort Y Busqueda Binaria: {posicion}")
+                nombreAlgoritmo = "Bubble Sort y Busqueda Binaria"
+            else:
+                print(f"El numero {numeroObjetivo} no se encuentra en la lista.")
+            
 
-    # Búsquedas
-    if opcion == "6":
-        os.system("cls" if os.name == "nt" else "clear")
+        elif opcion == "6":
+            numeroObjetivoLineal = int(input("Ingrese un numero entre 1 y 50: "))
+            posicion = BusquedaLineal(SelectionSort(listaDeNumerosIntermedia), numeroObjetivoLineal)
+            if posicion != -1:
+                print(f"Posicion del numero {numeroObjetivoLineal} en la lista ordenada con Selection Sort Y Busqueda Lineal: {posicion}") 
+                nombreAlgoritmo = "Selection Sort y Busqueda Lineal"
+            else:
+                print(f"El numero {numeroObjetivoLineal} no se encuentra en la lista.")
 
-        print(colorama.Fore.YELLOW + "\n--- Búsqueda Binaria ---")
-        listaOrdenada = BubbleSort(listaDeNumeros.copy())
-        try:
-            numeroObjetivo = int(input("Ingrese un número entre 1 y 50: "))
-            posicion = BusquedaBinaria(listaOrdenada, numeroObjetivo)
-            print(f"Número {numeroObjetivo} encontrado en la posición {posicion}" if posicion != -1 else "Número no encontrado")
-        except:
-            print("Entrada inválida.")
+        fin = time.time()
+        duracion = fin - inicio
 
-        print(colorama.Fore.CYAN + "\n--- Búsqueda Lineal ---")
-        listaOrdenada2 = SelectionSort(listaDeNumerosEnana.copy())
-        try:
-            numeroObjetivoLineal = int(input("Ingrese un número entre 1 y 10: "))
-            posicion2 = BusquedaLineal(listaOrdenada2, numeroObjetivoLineal)
-            print(f"Número {numeroObjetivoLineal} encontrado en la posición {posicion2}" if posicion2 != -1 else "Número no encontrado")
-        except:
-            print("Entrada inválida.")
+        print(colorama.Fore.BLUE + "Algoritmo usado: " + nombreAlgoritmo)
+        print(colorama.Fore.BLUE + f"Tiempo de ejecucion: {duracion:.4f} segundos")
 
-        input(colorama.Fore.WHITE + "\nPresiona Enter para volver al menú...")
-        continue
+        input("\nPresione Enter para volver al menú...")
 
-    # Algoritmos de ordenamiento
-    inicio = time.time()
-
-    if opcion == "1":
-        resultado = BubbleSort(listaBase.copy())
-        nombre = "Bubble Sort"
-    elif opcion == "2":
-        resultado = InsertionSort(listaBase.copy())
-        nombre = "Insertion Sort"
-    elif opcion == "3":
-        resultado = QuickSort(listaBase.copy())
-        nombre = "Quick Sort"
-    elif opcion == "4":
-        resultado = SelectionSort(listaBase.copy())
-        nombre = "Selection Sort"
-    elif opcion == "5":
-        resultado = sorted(listaBase.copy())
-        nombre = "sorted()"
-    else:
-        print("Opción no válida. Presiona Enter para continuar.")
-        input()
-        continue
-
-    fin = time.time()
-    duracion = fin - inicio
-
-    print(colorama.Fore.CYAN + f"\nAlgoritmo usado: {nombre}")
-    print(colorama.Fore.GREEN + f"Primeros 20 números ordenados: {resultado[:20]} ...")
-    print(colorama.Fore.MAGENTA + f"Tiempo de ejecución: {duracion:.6f} segundos")
-
-    input(colorama.Fore.WHITE + "\nPresiona Enter para volver al menú...")
+menu() 
+>>>>>>> Rami
