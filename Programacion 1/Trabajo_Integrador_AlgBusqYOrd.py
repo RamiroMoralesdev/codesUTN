@@ -53,6 +53,10 @@ def SelectionSort(lista): # Ordena seleccionando el elemento mas pequeño de la 
         lista[i], lista[min_idx] = lista[min_idx], lista[i]
     return lista
 
+ 
+
+sorted_list = sorted(listaDeNumerosGigante)  # Ordena la lista gigante de numeros
+
 # ================================ ALGORITMOS DE BUSQUEDA =======================================
 
 # Búsqueda Binaria: requiere lista ordenada, divide el rango de búsqueda a la mitad
@@ -87,9 +91,10 @@ def menu():
         print("4. Ordenar lista de numeros enana con Selection Sort")
         print("5. Buscar un numero en la lista ordenada con Bubble Sort y Busqueda Binaria")
         print("6. Buscar un numero en la lista ordenada con Selection Sort y Busqueda Lineal")
-        print("7. Salir")
+        print("7. Ordenar con funcion integrada de Python (sorted)")
+        print("8. Salir")
         opcion = input("Seleccione una opcion: ")
-        if opcion == "7":
+        if opcion == "8":
             print(colorama.Fore.CYAN + "Saliendo del programa...")
             break
 
@@ -131,6 +136,10 @@ def menu():
                 nombreAlgoritmo = "Selection Sort y Busqueda Lineal"
             else:
                 print(f"El numero {numeroObjetivoLineal} no se encuentra en la lista.")
+
+        elif opcion == "7":
+            print(colorama.Fore.GREEN + f"Lista gigante ordenada con la funcion integrada de Python (sorted): {sorted_list}")
+            nombreAlgoritmo = "Funcion integrada de Python (sorted)"
 
         fin = time.time()
         duracion = fin - inicio
