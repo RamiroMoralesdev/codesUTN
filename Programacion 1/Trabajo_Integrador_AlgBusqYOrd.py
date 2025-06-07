@@ -45,6 +45,7 @@ def QuickSort(listaGigante): # Ordena dividiendo la lista en sublistas menores y
 
 def SelectionSort(lista): # Ordena seleccionando el elemento mas pequeño de la lista y colocandolo al principio, Es recursivo hasta completar la lista.
 
+    
     for i in range(len(lista)):
         min_idx = i
         for j in range(i + 1, len(lista)):
