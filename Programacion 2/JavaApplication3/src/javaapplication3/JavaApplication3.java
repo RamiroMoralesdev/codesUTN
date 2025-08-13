@@ -18,40 +18,34 @@ public class JavaApplication3 {
     public static void main(String[] args) {
        
         Scanner input = new Scanner(System.in);
-        
-        System.out.println("Ingrese ano de nacimiento para determinar si es bisiesto ");
-        int anioUsuario = input.nextInt();
-        
-        if (anioUsuario % 4 == 0 && anioUsuario % 100 != 0) {
-            System.out.print("El anio " + anioUsuario + " es bisiesto");
-        } else {
-           System.out.print("El anio " + anioUsuario + " no es bisiesto");
-        }
-        
-        System.out.println();
-        
-        
-        
-        // Ejercicio 2
 
-       System.out.println("Ingrese el primer numero");
-       int primer_num = input.nextInt();
 
-       System.out.println("Ingrese el segundo numero");
-       int segundo_num = input.nextInt();
+        
 
-       System.out.println("Ingrese el tercer numero");
-       int tercer_num = input.nextInt();
-
-       if (primer_num > segundo_num && primer_num > tercer_num) {
-           System.out.println("El mayor es: " + primer_num);
-       } else if (segundo_num > primer_num && segundo_num > tercer_num) {
-           System.out.println("El mayor es: " + segundo_num);
-       } else {
-           System.out.println("El mayor es: " + tercer_num);
-       }
+    // Ejercicio 5
+    System.err.println("Ejercicio 5"); 
 
     
-}
+    int num = -1; // valor inicial distinto de 0 para entrar al bucle
+    int suma = 0;
+    
+    while (num != 0) {
+        System.out.println("Ingrese un numero (0 para salir): ");
+        num = input.nextInt();
+        
+        if (num != 0 && num % 2 == 0) {
+            System.out.println("El numero " + num + " es par");
+            suma += num; // sumar al acumulador
+            System.out.println("La suma de los numeros pares es: " + suma);
+        }
+    }
+    
+
+  
+
+
+    
+}  // Fin del main 
+    
     
 }
