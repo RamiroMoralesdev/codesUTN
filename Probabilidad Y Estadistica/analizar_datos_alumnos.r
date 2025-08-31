@@ -1,6 +1,6 @@
 library(readxl)
 
-datos <- read_excel("/home/ramiromoralesdev/codesUTN/Probabilidad Y Estadistica/tabla_alumnos_estadisticas.xlsx")
+datos <- read_excel(file.choose())
 
 tiempo <- datos$`TIEMPO SEMANAL en HS. DEDIC. EST.`
 k <- ceiling(1 + 3.322 * log10(length(tiempo)))

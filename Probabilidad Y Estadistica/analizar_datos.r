@@ -1,5 +1,5 @@
 library(readxl)
-datos <- read_excel("/home/ramiromoralesdev/codesUTN/Probabilidad Y Estadistica/tabla_frecuencia.xlsx") # Tuve que poner el path completo porque sino no lo encontraba
+datos <- read_excel(file.choose())
 
 # Verificar la estructura de los datos
 str(datos)
