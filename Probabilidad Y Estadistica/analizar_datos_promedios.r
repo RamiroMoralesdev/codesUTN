@@ -1,0 +1,32 @@
+# Validar si readxl está instalado, sino instalar
+if (!require("readxl")) {
+  install.packages("readxl")
+  library(readxl)
+} else {
+  library(readxl)
+}
+
+
+datos <- read_excel(file.choose()) # Usar file.choose() para seleccionar el archivo. Porque no me esta encontrando el archivo con path 
+
+# Función para calcular moda
+moda <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+
+
+vars <- c("Tickets_Soporte", "Tiempo_Conexion")
+
+# Calcular estadísticas. Usando for para iterar y funciones reservadas. cat para imprimir en una sola línea
+for (v in vars) {
+  print("\n---", v, "---\n")
+  x <- datos[[v]]
+  
+  print("Media: ", mean(x, na.rm = TRUE), "\n")
+  print("Mediana: ", median(x, na.rm = TRUE), "\n")
+  print("Moda: ", moda(x), "\n")
+  print("Cuartiles:\n")
+  print(quantile(x, probs = c(0.25, 0.5, 0.75), na.rm = TRUE))
+  cat("Desvío estándar: ", sd(x, na.rm = TRUE), "\n")
+}
