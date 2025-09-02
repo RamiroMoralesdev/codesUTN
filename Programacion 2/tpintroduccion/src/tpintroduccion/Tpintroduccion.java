@@ -16,7 +16,7 @@ public class Tpintroduccion {
         Scanner scanner = new Scanner(System.in);
         
         // Ejercicio 1 
-        System.out.println("Hola mundo");
+        System.out.println("Hola Java!");
         
         
         // Ejercicio 2 
