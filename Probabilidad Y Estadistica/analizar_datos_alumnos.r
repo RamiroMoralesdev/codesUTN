@@ -116,21 +116,9 @@ hist(tiempo,
      main = "Distribución del Tiempo Semanal Dedicado al Estudio",
      xlab = "Tiempo (horas semanales)",
      ylab = "Frecuencia Absoluta",
-     col = "lightblue",
-     border = "black",
-     las = 1)
+     col = "blue",
+     )
 
-# Agregar líneas de referencia
-abline(v = media_tendencia, col = "red", lwd = 2, lty = 2)
-abline(v = mediana_tendencia, col = "blue", lwd = 2, lty = 2)
-
-# Texto
-legend("topright", 
-       legend = c(paste("Media =", round(media_tendencia, 1)), 
-                 paste("Mediana =", round(mediana_tendencia, 1))),
-       col = c("red", "blue"), 
-       lty = 2, 
-       lwd = 2)
 
 # 4.b DIAGRAMA CIRCULAR - SATISFACCIÓN
 
@@ -141,12 +129,11 @@ porcentajes <- round(tabla_satis_rel * 100, 1)
 etiquetas <- paste(names(tabla_satis), "\n", porcentajes, "%", sep = "")
 
 # Crear gráfico circular
-pie(tabla_satis, 
+pie(tabla_satis, # Toma los datos de la tabla de frecuencias
     labels = etiquetas,
-    main = "Distribución del Nivel de Satisfacción con la Carrera",
-    col = rainbow(length(tabla_satis)),
-    clockwise = TRUE)
-
+    main = "Distribución del Nivel de Satisfacción con la Carrera", # Título del gráfico
+    col = rainbow(length(tabla_satis)) # Colores variados a partir de la longitud de elementos de la tabla
+)
 
 print("ANALISIS DE GRAFICOS. CONCLUSIONES")
 
