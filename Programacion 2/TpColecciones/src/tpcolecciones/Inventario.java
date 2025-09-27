@@ -1,6 +1,7 @@
 package tpcolecciones;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Inventario {
     private ArrayList<Producto> productos;
@@ -19,21 +20,22 @@ public class Inventario {
         }
     }
 
-    public void buscarProductoPorId(String id) {
-        // Tambien se puede usar while para no recorrer todo el array si ya se encontro, tengo que ver como era
-        for (Producto p : productos) {
-            if (p.getId().equals(id)) {
-                p.mostrarInfo();
-                return;
+    public Producto buscarProductoPorId(String id) {
+        Producto productoEncontrado = null;
+        Iterator<Producto> it = this.productos.iterator();
+        while (it.hasNext() && productoEncontrado == null) {
+            Producto a = it.next();
+            if (a.getId().equalsIgnoreCase(id)) {
+                productoEncontrado = a;
+                a.mostrarInfo();
             }
         }
-        System.out.println("Producto no encontrado.");
-    }
+        return productoEncontrado;
 
+    }
         public void buscarProductoPorCategoria(CategoriaProducto categoria) {
-        // Tambien se puede usar while para no recorrer todo el array si ya se encontro, tengo que ver como era
         for (Producto p : productos) {
-            if (p.getId().equals(categoria)) {
+            if (p.getCategoria().equals(categoria)) {
                 p.mostrarInfo();
                 return;
             }
@@ -47,27 +49,40 @@ public class Inventario {
 
     public void actualizarStock(String id, int nuevaCantidad) {
         for (Producto p : productos) {
-            // Con foreach recorro todo el array, actualiza el stock pero sigue recorriendo hasta el final. Con while para al encontrar elemento 
             // Valido el id con equals para acceder al elemento 
             if (p.getId().equals(id)) {
                 p.setCantidad(nuevaCantidad);
-                System.out.println("Stock actualizado.");
+                System.out.println("Stock actualizado. Nuevo valor: " + p.getCantidad());
             } else {
-                System.out.println("Producto no encontrado.");
+
+            }
+        }
+    }
+
+    public void stockDisponible(String id) {
+        for (Producto p : productos) {
+            if (p.getId().equals(id)) {
+                System.out.println("Stock disponible del producto: " + p.getId() + " es: " + p.getCantidad());
+                return;
             }
         }
         System.out.println("Producto no encontrado.");
+        
     }
 
 
-    public void productoMayorStock() {;
-    for (i = 0; i < productos.size(); i++) {
-        if (p.getCantidad() > i.getCantidad()) {
-            productoMayorStock = p;
-            System.out.println("Producto con mayor stock:" + p);
+    public void productoMayorStock() {
+        Producto mayor = productos.get(0); // arranco con el primero
+        for (Producto p : productos) { // For each recorre todos los elementos, no necesita contador para incrementar 
+            if (p.getCantidad() > mayor.getCantidad()) {
+                mayor = p;
+            }
         }
+    
+        System.out.println("El producto con mayor stock es: " 
+            + mayor.getNombre() + " con " + mayor.getCantidad() + " unidades.");
     }
-}
+    
 
     public void filtrarProductosPrecios(int min, int max) {
         for (Producto p : productos) {

@@ -35,7 +35,7 @@ public class TpColecciones {
         inventario.listarProductos(); 
 
         System.out.println("-----BUSCAR PRODUCTO POR ID-----");
-        inventario.buscarProductoPorId("005");
+        inventario.buscarProductoPorId("004");
 
         System.out.println("-----BUSCAR PRODUCTO POR CATEGORIA-----");
         inventario.buscarProductoPorCategoria(CategoriaProducto.ELECTRONICA);
@@ -49,10 +49,10 @@ public class TpColecciones {
         inventario.actualizarStock("002", 100);
 
         System.out.println("------STOCK DISPONIBLE DEL PRODUCTO ------");
-        // inventario.p.stockDisponible("002");
+        inventario.stockDisponible("005");
 
         System.out.println("------PRODUCTO CON MAYOR STOCK------");
-        // inventario.productoMayorStock(); Falta una vuelta de rosca
+        inventario.productoMayorStock(); 
 
         System.out.println("------FILTRAR PRODUCTOS POR PRECIO------");
         inventario.filtrarProductosPrecios(1000, 3000);
