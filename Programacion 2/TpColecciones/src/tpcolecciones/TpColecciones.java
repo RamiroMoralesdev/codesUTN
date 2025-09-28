@@ -14,7 +14,7 @@ public class TpColecciones {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Inventario inventario = new Inventario(); // Crear instancia de Inventario
+        Inventario inventario = new Inventario(); // Crear instancia de Inventario. Inventario tiene el ArrayList
 
         // Instancio los productos
         Producto p1 = new Producto("001", "Manzanas", 200, 100, CategoriaProducto.ALIMENTOS);
