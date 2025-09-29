@@ -4,6 +4,7 @@
  */
 package tpcolecciones;
 
+
 /**
  *
  * @author ramam
@@ -15,6 +16,8 @@ public class TpColecciones {
      */
     public static void main(String[] args) {
         Inventario inventario = new Inventario(); // Crear instancia de Inventario. Inventario tiene el ArrayList
+        Bibloteca bibloteca = new Bibloteca("Biblioteca");
+
 
         // Instancio los productos
         Producto p1 = new Producto("001", "Manzanas", 200, 100, CategoriaProducto.ALIMENTOS);
@@ -59,6 +62,41 @@ public class TpColecciones {
 
         System.out.println("------CATEGORIAS DISPONIBLES------");
         CategoriaProducto.mostrarCategorias();
+
+
+
+
+        // Instancio libros
+        System.out.println("------------------");
+        System.out.println("-----LIBROS-----");
+
+        Libro l1 = new Libro("1", "Piense y Hagase Rico", 2000, new Autor("10", "Napoleon Hill", "Estadounidense"));
+        Libro l2 = new Libro("2", "El Conde de Monte Cristo", 1846, new Autor("11", "Alexandre Dumas", "Frances")); 
+        Libro l3 = new Libro("3", "MalaSangre", 2023, new Autor("12", "Giselle Kruger", "Argentina"));
+        Libro l4 = new Libro("4", "El Principito", 2000, new Autor("13", "Antoine de Saint-Exupery", "Frances"));
+
+        bibloteca.agregarLibro(l1);
+        bibloteca.agregarLibro(l2);
+        bibloteca.agregarLibro(l3);
+        bibloteca.agregarLibro(l4);
+
+        System.out.println("-----LISTAR LIBROS-----");
+        bibloteca.listarLibros();
+
+        System.out.println("-----BUSCAR LIBRO POR ISBN-----");
+        bibloteca.buscarLibroPorId("1");
+
+        System.out.println("-----ELIMINAR LIBRO POR ISBN-----");
+        bibloteca.eliminarLibro("1"); // Falta obtener indices
+
+        System.out.println("-----OBTENER CANTIDAD DE LIBROS-----");
+        bibloteca.obtenerCantidadLibros();
+
+        System.out.println("-----FILTRAR LIBROS POR AÑO-----");
+        bibloteca.filtarLibrosPorAnio(2000);
+        
+        System.out.println("-----MOSTRAR AUTORES DISPONIBLES-----");
+        bibloteca.mostrarAutoresDisponibles();
 
     
 }
