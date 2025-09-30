@@ -24,9 +24,6 @@ public String getNacionalidad() {
     return nacionalidad;
 }
 
-public static Autor getAutor(String ID) {
-    return Autor;
-}
     @Override
     public String toString() {
         return "Informacion de Autor: " + "ID=" + ID + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad + '}';
