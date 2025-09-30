@@ -1,5 +1,6 @@
 package tpcolecciones;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Profesor {
@@ -9,12 +10,12 @@ public class Profesor {
     private String especialidad;
     private List<Curso> cursos;
 
-public Profesor(String id, String nombre, String apellido, String especialidad, List<Curso> cursos) {
+public Profesor(String id, String nombre, String apellido, String especialidad) {
     this.id = id;
     this.nombre = nombre;
     this.apellido = apellido;
     this.especialidad = especialidad;
-    this.cursos = cursos;
+    this.cursos = new ArrayList<>();
 }
 
 public String getId() {
@@ -51,11 +52,9 @@ public void listarCursos() {
     }
 }
 
-// public void mostrarInfo() {
-//     System.out.println("Profesor: " + nombre + " " + apellido + " con especialidad en " + especialidad + ".");
-//     System.out.println("Cursos: " + listarCursos() );
-//     listarCursos();
-// }
+public void mostrarInfo() {
+    System.out.println("Profesor: " + nombre + " " + apellido + " con especialidad en " + especialidad + ".");
+}
 
 @Override
 public String toString() {

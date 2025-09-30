@@ -17,9 +17,8 @@ public class TpColecciones {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Inventario inventario = new Inventario(); // Crear instancia de Inventario. Inventario tiene el ArrayList
-        Bibloteca bibloteca = new Bibloteca("Biblioteca");
-        Universidad universidad = new Universidad("UTN", null, null);
+        // Inventario inventario = new Inventario(); // Crear instancia de Inventario. Inventario tiene el ArrayList
+        // Bibloteca bibloteca = new Bibloteca("Biblioteca");
 
 
         // // Instancio los productos
@@ -107,47 +106,50 @@ public class TpColecciones {
 
         System.out.println("-----------------------------------");
         System.out.println("--------UNIVERSIDAD--------");
-    
-        List<Curso> listaCursos = new ArrayList<>();
-    
-        Profesor p1 = new Profesor("101", "Charly", "Cimino",   "Programacion", listaCursos);
-        Profesor p2 = new Profesor("102", "Ariel ", "Enferrel", "Programacion", listaCursos);
-        Profesor p3 = new Profesor("103", "Cintia", "Rigoni", "Programacion", listaCursos); 
 
-        System.out.println(listaCursos);
+        Universidad universidad = new Universidad("UTN");
+        System.out.println(universidad.profesores);
+        
+        Profesor p1 = new Profesor("101", "Charly", "Cimino",   "Programacion");
+        Profesor p2 = new Profesor("102", "Ariel ", "Enferrel", "Programacion");
+        Profesor p3 = new Profesor("103", "Cintia", "Rigoni", "Programacion"); 
+
+        
 
         Curso c1 = new Curso("001", "Programacion 2", null); //  Temporalmente null
         Curso c2 = new Curso("002", "Programacion 3", null); 
         Curso c3 = new Curso("003", "Programacion 4", null); 
 
-        c1.setProfesor(p1);
-        c2.setProfesor(p2);
-        c3.setProfesor(p3);
+        universidad.agregarProfesor(p1);
+        universidad.agregarProfesor(p2);
+        universidad.agregarProfesor(p3);
 
-        p1.agregarCurso(c1);
-        p2.agregarCurso(c2);
-        p3.agregarCurso(c3);
+        universidad.agregarCurso(c1);
+        universidad.agregarCurso(c2);
+        universidad.agregarCurso(c3);
 
-        System.out.println(listaCursos);
+        System.out.println(universidad.profesores);
+
+        
 
 
         System.out.println("-----LISTAR CURSOS-----");
         universidad.listarCursos();
 
-        // System.out.println("-----LISTAR PROFESORES--------");
-        // universidad.listarProfesores();
+        System.out.println("-----LISTAR PROFESORES--------");
+        universidad.listarProfesores();
 
-        // System.out.println("-----BUSCAR PROFESOR POR ID--------");
-        // universidad.buscarProfesorPorId("101");
+        System.out.println("-----BUSCAR PROFESOR POR ID--------");
+        universidad.buscarProfesorPorId("101");
 
-        // System.out.println("-----BUSCAR CURSO POR CODIGO--------");
-        // universidad.buscarCursoPorCodigo("001");
+        System.out.println("-----BUSCAR CURSO POR CODIGO--------");
+        universidad.buscarCursoPorCodigo("001");
 
-        // System.out.println("-----ELIMINAR CURSO POR CODIGO--------");
-        // universidad.eliminarCurso("001");
+        System.out.println("-----ELIMINAR CURSO POR CODIGO--------");
+        universidad.eliminarCurso("001");
 
-        // System.out.println("-----ELIMINAR PROFESOR POR ID--------");
-        // universidad.eliminarProfesor("101");
+        System.out.println("-----ELIMINAR PROFESOR POR ID--------");
+        universidad.eliminarProfesor("101");
 
     }
 }

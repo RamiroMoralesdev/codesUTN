@@ -1,16 +1,18 @@
 package tpcolecciones;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Universidad {
     String nombre;
-    List<Profesor> profesores;
-    List<Curso> cursos;
+    ArrayList<Profesor> profesores;
+    ArrayList<Curso> cursos;
 
-    public Universidad(String nombre, List<Profesor> profesores, List<Curso> cursos) {
+    public Universidad(String nombre) {
         this.nombre = nombre;
-        this.profesores = profesores;
-        this.cursos = cursos;
+        this.profesores = new ArrayList<>();
+        this.cursos = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -19,7 +21,7 @@ public class Universidad {
 
     public void listarCursos() {
         for (Curso c : cursos) {
-            c.mostrarInfo();
+            System.out.println(c.getNombre());
         }
     }
 
@@ -38,13 +40,15 @@ public class Universidad {
     public void listarProfesores() {
         for (Profesor p : profesores) {
             p.mostrarInfo();
+            
         }
     }
+
 
     public void buscarProfesorPorId(String id) {
         for (Profesor p : profesores) {
             if (p.getId().equalsIgnoreCase(id)) {
-                p.mostrarInfo();
+                System.out.println("Profesor encontrado: " + p.getNombre() + " " + p.getApellido());
                 return;
             }
         }
@@ -54,7 +58,7 @@ public class Universidad {
     public void buscarCursoPorCodigo(String codigo) {
         for (Curso c : cursos) {
             if (c.getCodigo().equalsIgnoreCase(codigo)) {
-                c.mostrarInfo();
+                System.out.println("Curso encontrado: " + c.getNombre());;
                 return;
             }
         }
@@ -65,6 +69,7 @@ public class Universidad {
         for (Curso c : cursos) {
             if (c.getCodigo().equalsIgnoreCase(codigo)) {
                 cursos.remove(c);
+                System.out.println("Curso eliminado." + c.getNombre());
                 return;
             }
         }
@@ -75,6 +80,7 @@ public class Universidad {
         for (Profesor p : profesores) {
             if (p.getId().equalsIgnoreCase(id)) {
                 profesores.remove(p);
+                System.out.println("Profesor eliminado." + p.getNombre());
                 return;
             }
         }

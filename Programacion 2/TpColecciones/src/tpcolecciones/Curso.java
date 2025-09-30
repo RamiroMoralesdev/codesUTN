@@ -15,6 +15,10 @@ public class Curso {
         return nombre;
     }   
 
+    public String getNombreCompleto() {
+        return nombre;
+    }
+
     public String getCodigo() {
         return codigo;
     }
