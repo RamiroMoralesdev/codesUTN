@@ -14,7 +14,8 @@ public class HerenciaPolimorfismo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Vehiculo v = new Auto("Ford", "Mustang", 4);
+        v.mostrarInfo();
     }
     
 }
