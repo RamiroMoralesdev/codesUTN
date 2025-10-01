@@ -10,5 +10,12 @@ public class Rectangulo extends Figura {
         this.base = base;
         this.altura = altura;
     }
+
+    @Override
+    public void calcularArea(String nombre) {
+        System.out.println("El area del " + nombre + " es: " + base * altura);
+        System.out.println("Se termino de ejecutar el metodo sobreescrito de Rectangulo");
+    }
     
 }
+

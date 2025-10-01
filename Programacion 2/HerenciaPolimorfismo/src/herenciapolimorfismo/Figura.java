@@ -1,11 +1,10 @@
 package herenciapolimorfismo;
 
-public class Figura {
+public abstract class Figura {
     public Figura() {
-        
+
     }
 
-    public void calcularArea(String nombre) {
-        
-    }
+    public void calcularArea(String nombre) { }
 }
+       
