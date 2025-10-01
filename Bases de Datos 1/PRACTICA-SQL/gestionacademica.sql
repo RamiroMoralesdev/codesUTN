@@ -35,6 +35,16 @@ CREATE TABLE `alumnos` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `alumnos`
+--
+
+LOCK TABLES `alumnos` WRITE;
+/*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
+INSERT INTO `alumnos` VALUES (1,'Ana','Gomez',20,1),(2,'Juan','Perez',21,2),(3,'Sol','Martinez',22,NULL);
+/*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `asignaturas`
 --
 
@@ -53,6 +63,16 @@ CREATE TABLE `asignaturas` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `asignaturas`
+--
+
+LOCK TABLES `asignaturas` WRITE;
+/*!40000 ALTER TABLE `asignaturas` DISABLE KEYS */;
+INSERT INTO `asignaturas` VALUES (1,'MATEMATICA I ',8,1),(2,'PROGRMACION I',12,1),(3,'BASE DE DATOS I',12,1),(4,'ESTRUCTURAS DE DATOS',8,1),(5,'INTELIGENCIA ARTIFICIAL I',6,1);
+/*!40000 ALTER TABLE `asignaturas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `carreras`
 --
 
@@ -69,6 +89,16 @@ CREATE TABLE `carreras` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `carreras`
+--
+
+LOCK TABLES `carreras` WRITE;
+/*!40000 ALTER TABLE `carreras` DISABLE KEYS */;
+INSERT INTO `carreras` VALUES (1,'CIENCIA DE DATOS',5,'SISTEMAS'),(2,'ANALISIS DE DATOS',3,'SISTEMAS'),(3,'DISEÑO WEB',3,'ARTES Y DISEÑO'),(111,'Informatica',NULL,NULL),(222,'Electronica',NULL,NULL),(333,'Quimica',NULL,NULL);
+/*!40000 ALTER TABLE `carreras` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping routines for database 'gestionacademica'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +111,4 @@ CREATE TABLE `carreras` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-01 20:13:14
+-- Dump completed on 2025-10-01 20:46:38
