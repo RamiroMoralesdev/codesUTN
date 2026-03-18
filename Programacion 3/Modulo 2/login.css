@@ -1,0 +1,114 @@
+/* VARIABLES CSS */
+:root {
+    --color-primario: #ff6347;
+    --color-fondo: #f0f0f0;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --color-borde: #ddd;
+    --color-focus: #ff4500;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--color-texto);
+}
+
+/* CONTENEDOR */
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* FORMULARIO */
+.login-form {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* TITULO */
+.login-form h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-primario);
+}
+
+/* SUBTITULO */
+.subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* GRUPOS */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* LABEL */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+}
+
+/* FOCUS INPUT */
+input:focus {
+    outline: none;
+    border-color: var(--color-focus);
+}
+
+/* BOTON */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* HOVER BOTON */
+button:hover {
+    background-color: var(--color-focus);
+}
+
+/* TEXTO REGISTRO */
+.register {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* LINK */
+.register a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
