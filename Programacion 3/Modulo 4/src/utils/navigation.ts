@@ -56,3 +56,11 @@ export function isInAdminArea(pathname: string): boolean {
 export function isInClientArea(pathname: string): boolean {
   return pathname.includes("/pages/client/");
 }
+
+export function isInAuthArea(pathname: string): boolean {
+  return pathname.includes("/pages/auth/");
+}
+
+export function isInAppEntry(pathname: string): boolean {
+  return pathname === "/" || pathname.endsWith("/src/") || pathname.endsWith("/src/index.html");
+}
