@@ -1,0 +1,34 @@
+{
+  "categorias": [
+    "Hamburguesas",
+    "Pizzas",
+    "Papas Fritas",
+    "Bebidas"
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Hamburguesa Triple",
+      "descripcion": "Triple carne, cheddar y bacon",
+      "precio": 25000,
+      "imagen": "https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg",
+      "categoria": "Hamburguesas"
+    },
+    {
+      "id": 2,
+      "nombre": "Pizza Muzzarella",
+      "descripcion": "Salsa de tomate y muzzarella",
+      "precio": 18000,
+      "imagen": "https://www.laespanolaaceites.com/wp-content/uploads/2019/05/pizza-al-ajo-con-tomates-frescos-1080x671.jpg",
+      "categoria": "Pizzas"
+    },
+    {
+      "id": 3,
+      "nombre": "Papas con Cheddar",
+      "descripcion": "Papas fritas con cheddar y panceta",
+      "precio": 8000,
+      "imagen": "https://comedera.com/wp-content/uploads/sites/9/2022/11/papas-fritas-con-queso-cheddar-PG_PFCQCY30320002.jpg",
+      "categoria": "Papas Fritas"
+    }
+  ]
+}
