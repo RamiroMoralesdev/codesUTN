@@ -5,6 +5,7 @@
 package collecciones;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  *
@@ -55,10 +56,53 @@ public class Collecciones {
         pedido3.addDetallePedido(1, flan);
         usuario2.addPedido(pedido3);
 
-        
-        System.out.println("Pedido 1 - items: " + pedido1.getDetallesPedido().size() + " total: $" + pedido1.getTotal());
-        System.out.println("Pedido 2 - items: " + pedido2.getDetallesPedido().size() + " total: $" + pedido2.getTotal());
-        System.out.println("Pedido 3 - items: " + pedido3.getDetallesPedido().size() + " total: $" + pedido3.getTotal());
+        // colección de productos
+        List<Producto> productos = new java.util.ArrayList<>();
+        productos.add(cafe);
+        productos.add(te);
+        productos.add(jugoNaranja);
+        productos.add(agua);
+        productos.add(hamburguesa);
+        productos.add(pizza);
+        productos.add(ensalada);
+        productos.add(helado);
+        productos.add(brownie);
+        productos.add(flan);
+
+        // colección de usuarios
+        List<Usuario> usuarios = new java.util.ArrayList<>();
+        usuarios.add(usuario1);
+        usuarios.add(usuario2);
+
+        System.out.println(" UN PRODUCTO");
+        System.out.println(cafe);
+
+        System.out.println("LISTADO DE PRODUCTOS CARGADOS");
+        for (Producto producto : productos) {
+            System.out.println(producto);
+        }
+
+        System.out.println(" USUARIO CON MÁS PEDIDOS");
+        Usuario usuarioMaxPedidos = usuarios.get(0);
+        for (Usuario usuario : usuarios) {
+            if (usuario.getPedidos().size() > usuarioMaxPedidos.getPedidos().size()) {
+                usuarioMaxPedidos = usuario;
+            }
+        }
+        System.out.println("Usuario: " + usuarioMaxPedidos);
+        System.out.println("Pedidos:");
+        for (Pedido pedido : usuarioMaxPedidos.getPedidos()) {
+            System.out.println(pedido);
+        }
+
+        System.out.println(" COMPARACIÓN DE PRODUCTO");
+        Producto cafeNuevo = new Producto("Cafe", 1500.0, "Cafe premium", 60, "cafe_premium.png", true, bebidas);
+        System.out.println("Producto nuevo: " + cafeNuevo);
+        System.out.println("\nComparando con toda la colección:");
+        for (Producto producto : productos) {
+            boolean esIgual = cafeNuevo.equals(producto);
+            System.out.println(cafeNuevo.getNombre() + " = " + producto.getNombre() + "? " + esIgual);
+        }
     }
     
 }
