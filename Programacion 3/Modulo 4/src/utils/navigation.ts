@@ -46,7 +46,7 @@ export function goToRoleHome(rol: Rol): void {
     return;
   }
 
-  navigateTo("pages/client/index.html");
+  navigateTo("pages/store/home/home.html");
 }
 
 export function isInAdminArea(pathname: string): boolean {
@@ -54,7 +54,7 @@ export function isInAdminArea(pathname: string): boolean {
 }
 
 export function isInClientArea(pathname: string): boolean {
-  return pathname.includes("/pages/client/");
+  return pathname.includes("/pages/client/") || pathname.includes("/pages/store/");
 }
 
 export function isInAuthArea(pathname: string): boolean {

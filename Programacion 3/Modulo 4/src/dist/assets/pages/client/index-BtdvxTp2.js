@@ -1,0 +1,1 @@
+import{c as e,i as t,n,o as r,p as i,t as a,u as o}from"../../main-D2WXCwoL.js";/* empty css                   */var s=i((()=>{t(),o();var i=e(),a=document.getElementById(`welcome`),s=document.getElementById(`logout-btn`);a&&i&&(a.textContent=`Bienvenido ${i.email}. Tu rol es ${i.rol}.`),s&&s.addEventListener(`click`,()=>{r(),n()})}));a(),s();

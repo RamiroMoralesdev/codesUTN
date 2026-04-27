@@ -1,7 +1,9 @@
 import type { IUser } from "../types/user";
+import type { CartItem } from "../types/product";
 
 const USERS_KEY = "users";
 const SESSION_KEY = "userData";
+const CART_KEY = "cart";
 const DEFAULT_USERS: IUser[] = [   // INTERFAZ 
   { email: "admin", password: "admin123", rol: "admin" },
 ];
@@ -69,4 +71,49 @@ export function setSessionUser(user: IUser): void {
 
 export function clearSession(): void {
   localStorage.removeItem(SESSION_KEY);
+}
+
+export function getCart(): CartItem[] {
+  const json = localStorage.getItem(CART_KEY);
+
+  if (!json) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(json) as CartItem[];
+
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+
+    return parsed.filter((item) => item.quantity > 0);
+  } catch {
+    return [];
+  }
+}
+
+export function saveCart(items: CartItem[]): void {
+  localStorage.setItem(CART_KEY, JSON.stringify(items));
+}
+
+export function addProductToCart(productId: number, quantity = 1): void {
+  if (quantity <= 0) {
+    return;
+  }
+
+  const cart = getCart();
+  const existingItem = cart.find((item) => item.productId === productId);
+
+  if (existingItem) {
+    existingItem.quantity += quantity;
+  } else {
+    cart.push({ productId, quantity });
+  }
+
+  saveCart(cart);
+}
+
+export function clearCart(): void {
+  localStorage.removeItem(CART_KEY);
 }
