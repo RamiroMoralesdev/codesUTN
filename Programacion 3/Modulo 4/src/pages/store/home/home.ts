@@ -19,7 +19,7 @@ function renderCartCount(): void {
 		return;
 	}
 
-	const totalItems = getCart().reduce((acc, item) => acc + item.quantity, 0);
+	const totalItems = getCart().reduce((acc, item) => acc + item.quantity, 0); // Itera sobre cada elemento, suma, y devuelve un unico valor 
 	cartCount.textContent = String(totalItems);
 }
 
