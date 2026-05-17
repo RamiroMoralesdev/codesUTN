@@ -1,0 +1,11 @@
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/Main.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/entities/Base.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/entities/Categoria.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/entities/DetallePedido.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/entities/Pedido.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/entities/Producto.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/entities/Usuario.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/enums/Estado.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/enums/FormaPago.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/enums/Rol.java
+/home/ramiromoralesdev/codesUTN/Programacion 3/modulo7-programacion-funcional/src/main/java/interfaces/Calculable.java
